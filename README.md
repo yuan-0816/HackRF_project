@@ -10,7 +10,7 @@ cd firmware-bin
 hackrf_spiflash -w hackrf_one_usb.bin
 ``` 
 
-## Installation Software form source
+## Installation HackRF Software form source
 1. Open terminal and navigate to the folder where you downloaded the repostory.
 2. Run the following command to install the software:
 ```
@@ -26,6 +26,28 @@ sudo ldconfig
 ```
 hackrf_info
 ```
+---
+## Third-Party Installation
+### gps-sdr-sim
+1. Download the gps-sdr-sim from GitHub:
+```
+# if repo not in third_party folder, run:
+cd third_party
+git clone https://github.com/osqzss/gps-sdr-sim.git
+``` 
+2. Build gps-sdr-sim:
+```
+cd gps-sdr-sim
+gcc gpssim.c -lm -O3 -o gps-sdr-sim
+```
+3. Verify the installation by running:
+```
+./gps-sdr-sim -h
+```
+
+
+
+
 ---
 ## requirements
 ### Ubuntu
